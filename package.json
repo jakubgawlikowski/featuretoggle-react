@@ -1,15 +1,35 @@
 {
   "name": "featuretoggle-react",
-  "version": "0.0.1",
+  "version": "0.0.48",
   "description": "Library to use Feature Toggles of your choice in a React application",
-  "main": "index.js",
+  "main": "lib/",
   "scripts": {
+    "build": "rm -rf lib && ./node_modules/.bin/babel src/ -d lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "keywords": [
     "FeatureToggle",
     "react"
   ],
   "author": "Jakub Gawlikowski",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@optimizely/optimizely-sdk": "^4.6.0",
+    "flagsmith": "^1.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.13.13"
+  }
 }
